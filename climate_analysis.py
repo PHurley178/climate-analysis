@@ -16,8 +16,7 @@ for line in climate_data:
     if data[0][0] == '#':
         # don't want to process comment lines, which start with '#'
         pass
-    else:
-        # extract our max temperature in Fahrenheit - 4th column
+    else:        # extract our max temperature in Fahrenheit - 4th column
         fahr = float(data[3])
 
         # don't process invalid temperature readings of -9999
@@ -26,3 +25,4 @@ for line in climate_data:
             kelvin = temp_conversion.fahr_to_kelvin(fahr)
 
             print(str(celsius)+", "+str(kelvin))
+# TODO(smangham): Add call to process rainfall
